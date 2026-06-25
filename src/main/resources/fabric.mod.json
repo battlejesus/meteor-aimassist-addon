@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "aimassist",
+  "version": "${version}",
+  "name": "AimAssist",
+  "description": "AimAssist addon for Meteor Client",
+  "authors": [
+    "Anonymous"
+  ],
+  "contact": {
+    "sources": "https://github.com/battlejesus/meteor-aimassist-addon"
+  },
+  "icon": "assets/aimassist/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "meteor": [
+      "com.aimassist.addon.AimAssistAddon"
+    ]
+  },
+  "mixins": [
+    "aimassist.mixins.json"
+  ],
+  "custom": {
+    "meteor-client:color": "0,255,0",
+    "modmenu": {
+      "parent": {
+        "id": "meteor-client"
+      }
+    }
+  },
+  "depends": {
+    "java": ">=${jdk_version}",
+    "minecraft": "${minecraft_version}",
+    "meteor-client": "*"
+  }
+}
